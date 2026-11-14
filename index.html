@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dia da Consciência Negra</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Dia Da Consciência Negra</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="coluna-rolagem btn-tema" data-tema="o-que-e">
+                <ul>
+                    <li class="content-box"><h2>O que é a consciência negra?</h2></li>
+                </ul>
+            </section>
+        
+            <section class="coluna-rolagem btn-tema" data-tema="linha-cronologica">
+                <ul>
+                    <li class="content-box"><h2>Linha Cronológica</h2></li>
+                </ul>
+            </section>
+
+            <section class="coluna-rolagem btn-tema" data-tema="figuras-brasil">
+                <ul>
+                    <li class="content-box"><h2>Quais são as principais figuras da consciência negra no Brasil?</h2></li>
+                </ul>
+            </section>
+
+            <section class="coluna-rolagem btn-tema" data-tema="filosofos">
+                <ul>
+                    <li class="content-box"><h2>Raça segundo 20 filósofos</h2></li>
+                </ul>
+            </section>
+        
+            <section class="coluna-rolagem btn-tema" data-tema="movimento-mundo">
+                <ul>
+                    <li class="content-box"><h2>O movimento negro no mundo</h2></li>
+                </ul>
+            </section>
+
+            <section class="coluna-rolagem" id="btn-abrir-quiz">
+                <h2>QUIZ Consciência Negra</h2>
+                <p id="status-global" class="subtitulo-quiz">Clique para testar seus conhecimentos</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Estrutura do Card Explicativo / Modal do Quiz -->
+    <div id="modal-overlay" class="modal-overlay escondido">
+        <div class="modal-card">
+            <button id="btn-fechar-modal" class="btn-fechar">&times;</button>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="main.js"></script>  
+</body>
+</html>

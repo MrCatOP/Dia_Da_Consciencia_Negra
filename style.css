@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CORPO DA PÀGINA */
+body {
+    background-image: url(/image_c27dcb20.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #e1e1e6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background: linear-gradient(90deg, #652f2ff9,#673b3bf9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #e1e1e6;
+    border-bottom: 3px solid rgba(70, 52, 52, 0.733);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+footer{
+    background: linear-gradient(90deg, #652f2ff9,#673b3bf9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #e1e1e6;
+    border-top:  3px solid rgba(70, 52, 52, 0.733);
+
+}
+
+main{
+    flex: 1;
+    overflow: hidden;
+}
+
+/* SEGMENTAÇÂO DO CONTEÙDO PRINCÍPAL */
+.container {
+    max-width: 1400px;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+}
+
+/* DIRECIONAMENTO, ESTILO, FUNCIONALIDADE DO CONTEÙDO PRINCIPAL */
+.container{
+    flex-direction: column;
+}
+
+.coluna-rolagem{
+    text-align: center;
+    background-color: rgba(70, 52, 52, 0.733);
+    border: 2px solid rgba(70, 52, 52, 0.733);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    flex: 1;
+}
+
+.coluna-rolagem:hover{
+    border: 2px solid #ffffff; /* Muda de tracejada para sólida e branca */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45); /* Aumenta a sombra */
+    transform: translateY(-4px); /* Eleva levemente a caixa */
+}
+
+.coluna-rolagem {
+    overflow-y: auto;
+}
+
+.content-box {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-post {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1:hover, h2:hover{
+    cursor: pointer;
+    text-shadow: 6px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-tema, #btn-abrir-quiz {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.subtitulo-quiz {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #d4b483;
+}
+
+/* Responsividade corrigida para o seu layout flex */
+@media (max-width: 900px) {
+    .container{
+        flex-direction: column;
+    }
+}
+
+/* --- ESTILOS DO CARD EXPLICATIVO E QUIZ (MODAL) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.modal-card {
+    background-color: #2b2020;
+    border: 2px solid #d4b483;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    color: #e1e1e6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #e1e1e6;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn-fechar:hover {
+    color: #ff6b6b;
+}
+
+.modal-img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.lista-links {
+    margin-top: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-links a {
+    color: #f4a261;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lista-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS DO FORMULÁRIO DO QUIZ --- */
+.quiz-pergunta {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: left;
+}
+
+.quiz-pergunta p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quiz-opcao {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.quiz-opcao:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-enviar-quiz {
+    width: 100%;
+    padding: 12px;
+    background-color: #d4b483;
+    color: #1f1717;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar-quiz:hover {
+    background-color: #e5c697;
+}
+
+.resultado-box {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+/* --- MELHORIAS PARA OS TEXTOS EXPANDIDOS NO MODAL --- */
+.texto-modal p {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.texto-modal ul,
+.texto-modal ol {
+    margin: 12px 0 15px 22px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.texto-modal li strong {
+    color: #d4b483;
+}
+
+/* --- DESTAQUE VISUAL PARA O CARD DO QUIZ --- */
+#btn-abrir-quiz {
+    border-color: rgba(212, 180, 131, 0.6);
+    background-color: rgba(55, 38, 38, 0.85);
+}
+
+#btn-abrir-quiz:hover {
+    border-color: #d4b483;
+}
